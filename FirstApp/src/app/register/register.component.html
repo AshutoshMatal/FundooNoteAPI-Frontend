@@ -1,0 +1,65 @@
+
+
+
+<div fxLayoutAlign="center center" class="main-div">
+  <form [formGroup]="service.form"  >
+    <mat-card  class="demo">   
+             <input type="hidden" formControlName="$key">
+              <mat-toolbar color="warn" fxLayoout="row">Register Page!!!</mat-toolbar>
+                          <mat-form-field fxLayout="column">
+                            <input [(ngModel)]="user.username"  id="username"formControlName="username"  matInput type="username:" placeholder="username*">
+                            <mat-icon matSuffix style="margin-right: 10px;" color="disabled">perm_identity</mat-icon>
+                            <mat-error>
+                              This field is mandatory.
+                            </mat-error>
+                          </mat-form-field>
+                          <mat-form-field  fxLayout="column">
+                              <input [(ngModel)]="user.name"  id="txt"
+                              formControlName="name" matInput type="name" placeholder="name*">
+                              <mat-icon matSuffix style="margin-right: 10px;" color="disabled">person_add</mat-icon>
+                              <mat-error>
+                                  This field is mandatory.
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field fxLayout="column">
+                              <input  [(ngModel)]="user.password" id="txt" formControlName="password" matInput  type="password:" placeholder="Password*">
+                              <mat-icon matSuffix style="margin-right: 10px;" color="disabled">lock_open</mat-icon>
+                              <mat-error>
+                                  This field is mandatory.
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field fxLayout="column">
+                              <input  [(ngModel)]="user.emailId"  id="txt" formControlName="emailId"  matInput type="emailId:" placeholder="emailId*">
+                              <mat-icon matSuffix style="margin-right: 10px;" color="disabled">contact_mail</mat-icon>
+                              
+                              <mat-error>
+                                  This field is mandatory.
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field fxLayout="column">
+                              <input  [(ngModel)]="user.country"  id="txt" formControlName="country"  matInput type="country:" placeholder="country*">
+                              <mat-icon matSuffix style="margin-right: 10px;" color="disabled">contact_mail</mat-icon>
+                              
+                              <mat-error>
+                                  This field is mandatory.
+                                </mat-error>
+                            </mat-form-field>
+                      
+                         
+                          <mat-form-field  fxLayout="column">
+                            <input   [(ngModel)]="user.mobileNo" id="mobileNo"formControlName="mobileNo" matInput  type="mobile No :" placeholder="mobile No*">
+                            <mat-icon matSuffix style="margin-right: 10px;" color="disabled">call</mat-icon>
+                            <mat-error>
+                              This field is mandatory.
+                            </mat-error>
+                          </mat-form-field >
+                          
+                          <div class="button-row" fxLayout="row">
+                          <button mat-raised-button type="submit" color="warn"  value="Register" (click)="registerNow()">Submit</button>
+                          <button mat-raised-button type="submit" color="primary" >Clear</button>
+                        </div>
+                        
+                  </mat-card>
+          </form>
+        </div> 

@@ -1,0 +1,21 @@
+mat-toolbar
+{
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+ mat-icon
+ {
+   display:flex;
+   justify-content: right;
+ }
+ 
+.main-div{
+  height: 100vh;
+}
+.demo
+ {
+   width: 20vw;
+   height: 70vh;
+ }
