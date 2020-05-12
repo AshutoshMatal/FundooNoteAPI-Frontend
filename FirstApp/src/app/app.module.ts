@@ -21,15 +21,14 @@ import {RegisterService}from'./shared/register.service';
 import {ResetpasswordService}from'./shared/resetpassword.service';
 import {ForgetpasswordService}from'./shared/forgetpassword.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     ForgetpasswordComponent,
-    ResetpasswordComponent
-    
+    ResetpasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
     
   ],
   providers: [LoginService,
