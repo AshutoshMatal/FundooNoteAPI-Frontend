@@ -1,35 +1,46 @@
-<div fxLayoutAlign="center center" class="main-div">
-  <form [formGroup]="service.form" fxLayoutAlign="stretch">
+<div class="main">
+  <div fxLayoutAlign="center center">
     <mat-card class="demo">
-      <input type="hidden" formControlName="$key">
-      <mat-toolbar color="warn" fxLayout="row">
-        Login Page
-      </mat-toolbar>
-      <mat-form-field fxLayout="column">
-        <input [(ngModel)]="userlogin.emailId" id="emailId" formControlName="emailId" matInput type="emailId "
-          placeholder="emailId*">
-        <mat-icon matSuffix style="margin-right: 10px;" color="disabled">account_circle</mat-icon>
-        <mat-error>
-          This field is mandatory.
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field fxLayout="column">
-        <input [(ngModel)]="userlogin.password" id="txt" formControlName="password" matInput type="password"
-          placeholder="Password*">
-        <mat-icon matSuffix style="margin-right: 10px;" color="disabled">vpn_key</mat-icon>
-        <mat-error>
-          This field is mandatory
-        </mat-error>
-      </mat-form-field>
-      <div class="button-row" fxLayout="row">
-        <button mat-raised-button type="submit" color="warn" fxLayout="column" value="Login"
-          (click)="loginNow()">Login</button>
-        <button mat-raised-button color="primary" onclick="window.location.href='http://localhost:4200/register'"
-          fxLayoutAlign="center center">Register</button>
+      <form [formGroup]="service.form">
+        <input type="hidden" formControlName="$key">
+        <br>
+        <div fxLayout="row" fxLayoutAlign="center start" class="loginheader"> Fundoo Login </div>
+        <br>
+        <div>
+          <mat-form-field appearance="outline" class="form">
+            <mat-label>Email-Id</mat-label>
+            <input [(ngModel)]="userlogin.emailId" id="emailId" formControlName="emailId" matInput
+              placeholder="emailId*">
+            <mat-icon matSuffix style="margin-right: 10px;" color="disabled">account_circle</mat-icon>
+            <mat-error>
+              This field is mandatory.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <br>
+        <div>
+          <mat-form-field appearance="outline" class="form">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="userlogin.password" id="txt" formControlName="password" matInput type="password"
+              placeholder="Password*">
+            <mat-icon matSuffix style="margin-right: 10px;" color="disabled">visibility_off</mat-icon>
+            <mat-error>
+              This field is mandatory
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+        <div class="button-row" fxLayoutGap="40px" fxLayout="row">
+          <button mat-raised-button type="submit" color="warn" fxLayout="column" value="Login"
+            (click)="loginNow()">Login</button>
+          <button mat-raised-button color="primary" onclick="window.location.href='http://localhost:4200/register'"
+            fxLayoutAlign="center center">Register</button>
+        </div>
+        <a matSuffix style="margin-right: 10px;" href="http://localhost:4200/forget">
+          Forget Password ?
+        </a>
       </div>
-      <a href="http://localhost:4200/forgetpassword">
-        Forget Password ?
-      </a>
+      </form>
     </mat-card>
-  </form>
+  </div>
 </div>
