@@ -10,7 +10,13 @@
                 <span> Keep </span>
             </div>
         </div>
-
+        <div fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="40" fxFlex="60" class="searchbar">
+            <button mat-icon-button fxHide.xs="true">
+                <mat-icon>search</mat-icon>
+            </button>
+            <input matTooltip="Search" placeholder="Search" class="input" [(ngModel)]="search">
+        </div>
+      
     </mat-toolbar-row>
 
 </div>
