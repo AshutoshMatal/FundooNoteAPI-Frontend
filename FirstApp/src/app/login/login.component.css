@@ -22,7 +22,7 @@ width: 100%;
 .main{
   background :url('/assets/images/loginlogo3.jpg') no-repeat;
   width:100%;
-  height:100%;
+  height:120vh;
 }
 .loginheader{
   font-size: 34px;
@@ -34,4 +34,6 @@ width: 100%;
   {
     margin-left: 1px;
     margin:10%;
+    width: 100%;
+    height:100%
   }
