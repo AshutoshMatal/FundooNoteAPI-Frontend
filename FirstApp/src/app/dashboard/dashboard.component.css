@@ -9,4 +9,10 @@ span{
     box-shadow: 0px 7px 15px rgb(175, 172, 172);
 }
 
+.logo
+{
+    margin-top: 4%;
+    width: 40px;
+    margin-left: 7%; 
+}
 
