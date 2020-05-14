@@ -22,6 +22,8 @@ import {ResetpasswordService}from'./shared/resetpassword.service';
 import {ForgetpasswordService}from'./shared/forgetpassword.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     RegisterComponent,
     ForgetpasswordComponent,
     ResetpasswordComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
+  
     
   ],
   providers: [LoginService,
