@@ -9,7 +9,7 @@ export class RegisterService {
 
   constructor(public http:HttpClient) { }
   public doRegistration(user){
-    return this.http.post("http://localhost:8080/register",user,{responseType:'text' as 'json'});
+    return this.http.post("http://localhost:8080/user/register",user,{responseType:'text' as 'json'});
   }
 
   form: FormGroup=new FormGroup({
