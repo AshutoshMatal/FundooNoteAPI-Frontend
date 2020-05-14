@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService}from'../shared/login.service';
-import { UserLogin } from '../user-login';
+import { UserLogin } from '../Dto/user-login';
 import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class LoginComponent implements OnInit {
 
   title='Welcome to FundooNoteAPI';
-  constructor(public service:LoginService,
+  constructor(public loginservice:LoginService,
     private matsnackBar:MatSnackBar
     ) { }
   
@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
   message:any;
 
   public loginNow(){
-    let resp=this.service.doLogin(this.userlogin);
-    resp.subscribe((data)=>
+    let response=this.loginservice.doLogin(this.userlogin);
+    response.subscribe((data)=>
     {
       console.log(data);
       if(data!=null)
@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
           duration:1000,
           verticalPosition:'top'
         });
-      }else{
+      }
+      else{
         this.matsnackBar.open("Enter valid data",'Login Failed',{
           duration:1000,
           verticalPosition:'top'
