@@ -5,7 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import{ } from '@angular/router';
+
 
 const routes: Routes = [{
   path:"",
