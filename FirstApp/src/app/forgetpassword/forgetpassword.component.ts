@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ForgetpasswordService } from '../shared/forgetpassword.service';
-import { UserForgetPassword } from '../user-forget';
+import { UserForgetPassword } from '../Dto/user-forget';
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-forgetpassword',
