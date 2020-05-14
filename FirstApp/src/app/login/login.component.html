@@ -1,10 +1,11 @@
 <div class="main">
   <div fxLayoutAlign="center center">
     <mat-card class="demo">
-      <form [formGroup]="service.form">
+      <form [formGroup]="loginservice.form">
         <input type="hidden" formControlName="$key">
         <br>
         <div fxLayout="row" fxLayoutAlign="center start" class="loginheader"> Fundoo Login </div>
+        <br>
         <br>
         <div>
           <mat-form-field appearance="outline" class="form">
@@ -30,16 +31,16 @@
           </mat-form-field>
         </div>
         <div>
-        <div class="button-row" fxLayoutGap="40px" fxLayout="row">
-          <button mat-raised-button type="submit" color="warn" fxLayout="column" value="Login"
-            (click)="loginNow()">Login</button>
-          <button mat-raised-button color="primary" onclick="window.location.href='http://localhost:4200/register'"
-            fxLayoutAlign="center center">Register</button>
+          <div class="button-row" fxLayoutGap="40px" fxLayout="row">
+            <button mat-raised-button type="submit" color="warn" fxLayout="column" value="Login"
+              (click)="loginNow()">Login</button>
+            <button mat-raised-button color="primary" onclick="window.location.href='http://localhost:4200/register'"
+              fxLayoutAlign="center center">Register</button>
+          </div>
+          <a matSuffix style="margin-right: 10px;" href="http://localhost:4200/forget">
+            Forget Password ?
+          </a>
         </div>
-        <a matSuffix style="margin-right: 10px;" href="http://localhost:4200/forget">
-          Forget Password ?
-        </a>
-      </div>
       </form>
     </mat-card>
   </div>
