@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
+import { User } from '../Dto/user';
 import { RegisterService } from '../shared/register.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
