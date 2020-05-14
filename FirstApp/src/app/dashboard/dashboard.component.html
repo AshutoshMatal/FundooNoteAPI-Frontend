@@ -1,22 +1,28 @@
 <div fxLayout="column" fxlayoutAlign="center center" fxFlex="100">
-    <mat-toolbar-row class="toolbar" fxLayout="row">
-        <div class="icon" fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign="space-around center" fxFlex="20">
+    <mat-toolbar>
+        <mat-toolbar-row class="toolbar" fxLayout="row">
+            <div class="icon" fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign="space-around center"
+                fxFlex="20">
 
-            <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
-            </button>
-            <div class="icon" fxLayoutAlign="start center">
-                <img class="image" src="/../assets/images/keepicon.png">
-                <span> Keep </span>
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <div class="icon" fxLayoutAlign="start center">
+                    <img class="logo" src="/../assets/images/keepicon.png">
+                    <span> Keep </span>
+                </div>
             </div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="40" fxFlex="60" class="searchbar">
-            <button mat-icon-button fxHide.xs="true">
-                <mat-icon>search</mat-icon>
-            </button>
-            <input matTooltip="Search" placeholder="Search" class="input" [(ngModel)]="search">
-        </div>
-      
-    </mat-toolbar-row>
+            <div fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="45" fxFlex="60" class="searchbar">
+                <button mat-icon-button fxHide.xs="true">
+                    <mat-icon>search</mat-icon>
+                </button>
+                <input fxLayoutAlign.xs="space-evenly center" placeholder="Search" class="input" [(ngModel)]="search"
+                    (keyup)="searchbar()">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end center" fxFlex="20" fxLayoutGap="30px">
+                <mat-icon fxFlex="10" (click)="gridAndList()">{{icon}}</mat-icon>
+            </div>
 
+        </mat-toolbar-row>
+    </mat-toolbar>
 </div>
