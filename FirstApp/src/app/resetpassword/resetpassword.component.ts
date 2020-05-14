@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ResetpasswordService}from'../shared/resetpassword.service';
-import { UserResetPassword } from '../user-reset';
+import { UserReset } from '../Dto/user-reset';
 import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-resetpassword',
@@ -14,7 +14,7 @@ export class ResetpasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  userreset: UserResetPassword=new UserResetPassword("","");
+  userreset: UserReset=new UserReset("","");
   message:any;
 
   
