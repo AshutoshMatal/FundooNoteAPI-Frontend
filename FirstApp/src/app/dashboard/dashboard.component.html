@@ -1,28 +1,107 @@
-<div fxLayout="column" fxlayoutAlign="center center" fxFlex="100">
-    <mat-toolbar>
-        <mat-toolbar-row class="toolbar" fxLayout="row">
-            <div class="icon" fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign="space-around center"
-                fxFlex="20">
-
-                <button mat-icon-button>
+<div fxLayout="column" fxlayoutAlign="center center" fxFlex="100" class="main-dash">
+    <mat-toolbar class="toolbar">
+        <mat-toolbar-row fxLayout="row">
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign="space-evenly center" 
+                fxFlex.xs="15">
+                <button mat-icon-button class="menubutton" (click)="sideBarToggle()" fxShow="true">
                     <mat-icon>menu</mat-icon>
                 </button>
-                <div class="icon" fxLayoutAlign="start center">
-                    <img class="logo" src="/../assets/images/keepicon.png">
-                    <span> Keep </span>
-                </div>
-            </div>
-            <div fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="45" fxFlex="60" class="searchbar">
-                <button mat-icon-button fxHide.xs="true">
-                    <mat-icon>search</mat-icon>
-                </button>
-                <input fxLayoutAlign.xs="space-evenly center" placeholder="Search" class="input" [(ngModel)]="search"
-                    (keyup)="searchbar()">
-            </div>
-            <div fxLayout="row" fxLayoutAlign="end center" fxFlex="20" fxLayoutGap="30px">
-                <mat-icon fxFlex="10" (click)="gridAndList()">{{icon}}</mat-icon>
             </div>
 
+            <div fxLayoutAlign="start center">
+                <img class="logo" src="/../assets/images/keepicon.png">
+                <span fxHide.xs="true">{{title}}</span>
+                <span class="headerName1" *ngIf="title== null" fxHide.xs="true"> Fundoo </span>
+                <span class="headerName" *ngIf="title== null" fxHide.xs="true"> Notes </span>
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="40" fxFlex="45" class="searchbar">
+                <mat-icon-button fxHide.xs="true">
+                    <mat-icon fxLayoutAlign="center center">search</mat-icon>
+                </mat-icon-button>
+                <input matTooltip="Search" placeholder="Search" class="search-input" [(ngModel)]="search"
+                    (keyup)="searchbar()">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end end" fxFlex.xs="40" fxFlex="45" fxLayoutGap="30px">
+
+                <mat-icon-button fxHide.xs="true" fxLayout="row" fxLayoutAlign="start end" class="refresh">
+                    <mat-icon   fxFlex="10" matTooltip="Refresh">refresh</mat-icon>
+                </mat-icon-button>
+
+                <mat-icon-button fxHide.xs="true" class="gridAndList">
+                    <mat-icon fxFlex="10" (click)="gridAndList()">{{gridIcon}}</mat-icon>
+                </mat-icon-button>
+
+                <mat-icon-button fxHide.xs="true" fxLayout="row" fxLayoutAlign="start end" class="setting">
+                    <mat-icon fxFlex="10" matTooltip="Settings">settings</mat-icon>
+                </mat-icon-button>
+
+
+
+                <button fxHide.xs="true" fxFlex="nogrow" class="signout">
+                    <mat-icon fxFlex="10" (click)="Signout()"  color="primary">person_outline</mat-icon>
+                </button>
+            </div>
         </mat-toolbar-row>
     </mat-toolbar>
+
+
+    <div class="sidenav-div">
+
+        <mat-sidenav-container class="sidenav-container">
+            <mat-sidenav class="matSidenav " #sidenav mode="side" id="sidenav" [class.menu-open]="isMenuOpen"
+                [class.menu-close]="!isMenuOpen" opened>
+                <div>
+                    <button mat-button class="navbutton1" [routerLink]="['/addNote']" (click)="notes()">
+                        <mat-icon class="sidenav-icon">lightbulb_outline</mat-icon>
+                        <span class="sidenav-title" fxLayoutAlign="start center"> Notes</span>
+                    </button>
+                </div>
+
+                <div>
+                    <button mat-button class="navbutton" (click)="reminder()">
+                        <mat-icon class="sidenav-icon">notifications_none</mat-icon>
+                        <span class="sidenav-title" fxLayoutAlign="start center">Reminders</span>
+                    </button>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <button mat-button class="navbutton">
+                                <mat-icon class="sidenav-icon">label_outline</mat-icon>
+                                <span class="sidenav-title" fxLayoutAlign="start center"> Labels</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button mat-button class="navbutton">
+                            <mat-icon class="sidenav-icon">create</mat-icon>
+                            <span class="sidenav-title" fxLayoutAlign="start center"> Edit Labels</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <button mat-button class="navbutton" (click)="archive()">
+                            <mat-icon class="sidenav-icon">archive</mat-icon>
+                            <span class="sidenav-title" fxLayoutAlign="start center">Archieve</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button class="navbutton" (click)="trash()">
+                            <mat-icon class="sidenav-icon">delete</mat-icon>
+                            <span class="sidenav-title" fxLayoutAlign="start center">Trash</span>
+                        </button>
+                    </div>
+                </div>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
 </div>
