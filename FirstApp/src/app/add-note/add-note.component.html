@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center" >
+    <mat-card class="card" *ngIf="flag==true"  (click)="showNote()">
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="120px">
+            <div style="width:700px">
+                <input class="input" fxLayout="row" fxLayoutAlign="start center"  matInput
+                    placeholder="Take a note...">
+            </div>
+            <div fxLayout="row" style="width:150px">
+                <button mat-icon-button>
+                    <mat-icon matTooltip="New list">assignment_turned_in</mat-icon>
+                </button>
+
+                <button mat-icon-button>
+                    <mat-icon matTooltip="note with drawing" >brush</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon matTooltip="note with image">image</mat-icon>
+                </button>
+            </div>
+        </div >
+     </mat-card>
+    </div> 
+        
+
+       
