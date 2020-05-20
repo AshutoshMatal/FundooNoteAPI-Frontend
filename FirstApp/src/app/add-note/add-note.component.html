@@ -1,9 +1,8 @@
-<div fxLayout="row" fxLayoutAlign="center center" >
-    <mat-card class="card" *ngIf="flag==true"  (click)="showNote()">
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="card" *ngIf="flag==true" (click)="showNote()">
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="120px">
             <div style="width:700px">
-                <input class="input" fxLayout="row" fxLayoutAlign="start center"  matInput
-                    placeholder="Take a note...">
+                <input class="input" fxLayout="row" fxLayoutAlign="start center" matInput placeholder="Take a note...">
             </div>
             <div fxLayout="row" style="width:150px">
                 <button mat-icon-button>
@@ -11,15 +10,32 @@
                 </button>
 
                 <button mat-icon-button>
-                    <mat-icon matTooltip="note with drawing" >brush</mat-icon>
+                    <mat-icon matTooltip="note with drawing">brush</mat-icon>
                 </button>
                 <button mat-icon-button>
                     <mat-icon matTooltip="note with image">image</mat-icon>
                 </button>
             </div>
-        </div >
-     </mat-card>
-    </div> 
-        
-
-       
+        </div>
+    </mat-card>
+</div>
+<div fxLayout="row" fxLayoutAlign="start center">
+    <mat-card class="card2" *ngIf="flag==false">
+        <div fxLayout="column" fxLayoutAlign="start center">
+            <div style="width:500px">
+                <input class="input" fxLayout="row" fxLayoutAlign="start center" matInput placeholder="Title..."
+                    [formControl]="title">
+            </div>
+            <div style="width:500px">
+                <input class="input" fxLayoutAlign="start start" matInput placeholder="Take a note..."
+                    [formControl]="content">
+            </div>
+        </div>
+        <mat-card-footer>
+            <div fxLayout="row" fxLayoutAlign="space-between end" class="div">
+                <app-note-icons></app-note-icons>
+                <button mat-button matSuffix style="margin-right: 5px;" (click)="createNote()">close</button>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+</div>
