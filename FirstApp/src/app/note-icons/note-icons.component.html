@@ -1,0 +1,38 @@
+<div fxLayout="row" fxLayoutAlign="start start"  fxLayoutGap="30px" >
+    <button mat-icon-button class="reminder-button" [matMenuTriggerFor]="menu" (click)="reminder()">
+        <mat-icon>notifications_none</mat-icon>
+        <mat-menu #menu="matMenu" xPosition="after" class="list">
+            <button mat-menu-item class="item1">Reminder</button>
+            <button mat-menu-item class="item2" (click)="today()">Today</button>
+            <button mat-menu-item class="item2" (click)="tomorrow()">Tomorrow</button>
+            <button mat-menu-item class="item2" (click)="nextWeek()">NextWeek</button>
+        </mat-menu>
+    </button>
+
+    <button mat-icon-button class="collaborator" (click)="collaborator()">
+        <mat-icon matTooltip="colaborator">person_add</mat-icon>
+    </button>
+
+
+    <button mat-icon-button class="colorlist"(click)="colorlist()">
+        <mat-icon matTooltip="Change color">color_lens</mat-icon>
+    </button>
+
+
+    <button mat-icon-button class="archive" (click)="archive()">
+        <mat-icon matTooltip="Archive">archive</mat-icon>
+    </button>
+    <button mat-icon-button class="addimage"(click)="addimage()">
+        <mat-icon matTooltip="Add image">crop_original</mat-icon>
+    </button>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu1"  class="more" (click)="More()">
+        <mat-icon matTooltip="More">more_vert</mat-icon>
+        <mat-menu #menu1="matMenu" xPosition="after" class="vert">
+            <button mat-menu-item class="item1">Add Label</button>
+            <button mat-menu-item class="item2" >Show Label</button>
+        </mat-menu>
+    </button>
+   
+    
+</div>
