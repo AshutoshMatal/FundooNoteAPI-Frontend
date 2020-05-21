@@ -1,17 +1,19 @@
 <div class="main">
   <div fxLayoutAlign="center center">
     <mat-card class="demo">
-      <form [formGroup]="loginservice.form">
-        <input type="hidden" formControlName="$key">
+     <!-- <form [formGroup]="formGroup">
+        <input type="hidden" formControlName="$key">-->
         <br>
-        <div fxLayout="row" fxLayoutAlign="center start" class="loginheader"> Fundoo Login </div>
+        <div fxLayout="row" fxLayoutAlign="center start" class="loginheader">
+          <span class="headerName1"  fxHide.xs="true"> Fundoo  </span>
+          <br>
+          <span class="headerName"  fxHide.xs="true"> Login </span> </div>
         <br>
         <br>
         <div>
           <mat-form-field appearance="outline" class="form">
             <mat-label>Email-Id</mat-label>
-            <input [(ngModel)]="userlogin.emailId" id="emailId" formControlName="emailId" matInput
-              placeholder="emailId*">
+            <input   matInput placeholder="Email" name="emailId" type="emailId" [formControl]="emailId" required>
             <mat-icon matSuffix style="margin-right: 10px;" color="disabled">account_circle</mat-icon>
             <mat-error>
               This field is mandatory.
@@ -22,8 +24,8 @@
         <div>
           <mat-form-field appearance="outline" class="form">
             <mat-label>Password</mat-label>
-            <input [(ngModel)]="userlogin.password" id="txt" formControlName="password" matInput type="password"
-              placeholder="Password*">
+            <input   matInput placeholder="Password" name="password" type="password" [formControl]="password" required>
+            
             <mat-icon matSuffix style="margin-right: 10px;" color="disabled">visibility_off</mat-icon>
             <mat-error>
               This field is mandatory
@@ -31,9 +33,9 @@
           </mat-form-field>
         </div>
         <div>
-          <div class="button-row" fxLayoutGap="40px" fxLayout="row">
-            <button mat-raised-button type="submit" color="warn" fxLayout="column" value="Login"
-              (click)="loginNow()">Login</button>
+          <div class="button-row" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-evenly-center">
+            <button mat-raised-button type="submit" color="warn"  value="Login"
+            (click)="loginNow()">Login</button>
             <button mat-raised-button color="primary" onclick="window.location.href='http://localhost:4200/register'"
               fxLayoutAlign="center center">Register</button>
           </div>
@@ -41,7 +43,7 @@
             Forget Password ?
           </a>
         </div>
-      </form>
+      <!--</form>-->
     </mat-card>
   </div>
 </div>
