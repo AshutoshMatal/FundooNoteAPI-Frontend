@@ -49,7 +49,16 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['dashboard', 'createnote']);
 
   }
-  
+  archive() {
+    this.router.navigate(['dashboard', 'isArchive']);
+  }
+  trash() {
+    this.router.navigate(['dashboard', 'isTrash']);
+  }
+  reminder() {
+    this.router.navigate(['dashboard', 'reminder']);
+
+  }
   Signout() {
     this.router.navigate(['login']);
   }
