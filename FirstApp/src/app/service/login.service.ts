@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import{FormGroup,FormControl,Validators}from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { UserLogin } from '../Dto/user-login';
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-
   constructor(public http:HttpClient) { }
   public doLogin(userlogin){
     return this.http.post("http://localhost:8080/user/login",userlogin,{responseType:'text' as 'json'});
@@ -19,3 +19,4 @@ export class LoginService {
   
   });
 }
+
