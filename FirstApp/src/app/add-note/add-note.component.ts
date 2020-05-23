@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ServiceService } from '../shared/service.service';
+import { ServiceService } from '../service/service.service';
 import { NoteDTO } from '../dto/notedto';
 import { CardsComponent } from '../cards/cards.component';
 @Component({
