@@ -1,0 +1,58 @@
+.item1
+{
+    margin-top: -9%;
+    color: rgba(0, 0, 0, 0.582);
+}
+.item2{
+    margin-top: -12%;
+    color: rgba(0, 0, 0, 0.582);
+}
+.reminder-button{
+    width: 4px;
+    height: 4px;
+    border-radius:40px;
+    margin-left: 5px;
+    color: rgba(0, 0, 0, 0.582);
+
+}
+.collaborator{
+    width: 4px;
+    height: 4px;
+    color: rgba(0, 0, 0, 0.582);
+}
+.colorlist
+{
+    width: 4px;
+    height: 4px;
+    color: rgba(0, 0, 0, 0.582);
+    
+}
+.archive{
+    width: 4px;
+    height: 4px;
+    color: rgba(0, 0, 0, 0.582);
+}
+.addimage{
+    width: 4px;
+    height: 4px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.list
+{
+    border-radius:40px;
+}
+.note
+{
+    margin-top: 20px;
+}
+/* .undo{
+    width: 10px;
+    height: 10px;
+    color: rgba(0, 0, 0, 0.582);
+}
+.redo{
+    width: 10px;
+    height: 10px;
+    color: rgba(0, 0, 0, 0.582);
+} */
