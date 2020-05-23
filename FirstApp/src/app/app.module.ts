@@ -24,6 +24,15 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import { AddNoteComponent } from './add-note/add-note.component';
+import { NoteIconsComponent } from './note-icons/note-icons.component';
+import { CardsComponent } from './cards/cards.component';
+// import { TrashComponent } from './trash/trash.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +41,13 @@ import {MatMenuModule} from '@angular/material/menu';
     ForgetpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
+    AddNoteComponent,
+    NoteIconsComponent,
+    CardsComponent,
+   // TrashComponent
+  
+  
+    
   ],
   imports: [
     BrowserModule,
@@ -49,8 +65,10 @@ import {MatMenuModule} from '@angular/material/menu';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    MatMenuModule
-  
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDividerModule
     
   ],
   providers: [LoginService,
