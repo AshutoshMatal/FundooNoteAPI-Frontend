@@ -21,14 +21,12 @@
 </div>
 <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card class="card2" *ngIf="flag==false">
-        <div fxLayout="column" fxLayoutAlign="start center">
-            <div style="width:500px">
-                <input class="input" fxLayout="row" fxLayoutAlign="start center" matInput placeholder="Title..."
-                    [formControl]="title">
+        <div fxLayout="column" fxLayoutAlign="start start">
+            <div style="width:300px">
+                <textarea matInput type="text" placeholder="Title" [formControl]="title"></textarea>
             </div>
-            <div style="width:500px">
-                <input class="input" fxLayoutAlign="start start" matInput placeholder="Take a note..."
-                    [formControl]="content">
+            <div style="width:300px">
+                <textarea matInput type="text" placeholder="Take a note" [formControl]="content"></textarea>
             </div>
         </div>
         <mat-card-footer>
@@ -38,4 +36,6 @@
             </div>
         </mat-card-footer>
     </mat-card>
+
 </div>
+<app-cards></app-cards>
